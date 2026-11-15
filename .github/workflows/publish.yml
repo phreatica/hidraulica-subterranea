@@ -20,4 +20,10 @@ jobs:
       # Trusted Publishing exige npm >= 11.5.1 (o Node 22 vem com npm 10)
       - run: npm install -g npm@latest
       - run: npm ci
-      - run: npm publish --provenance --access public
+      # Se esta versão já está no npm (ex.: a primeira publicação manual), não tenta de novo
+      - id: existe
+        run: |
+          V=$(node -p "require('./package.json').version")
+          if npm view "hidraulica-subterranea@$V" version >/dev/null 2>&1; then echo "pular=1" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.existe.outputs.pular != '1'
+        run: npm publish --provenance --access public
