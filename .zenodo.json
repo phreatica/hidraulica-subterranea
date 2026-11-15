@@ -1,0 +1,9 @@
+{
+  "title": "hidraulica-subterranea: groundwater hydraulics toolkit in TypeScript",
+  "description": "Slug tests (Hvorslev, Bouwer & Rice), pumping tests (Theis, Cooper-Jacob, Theis recovery, Hantush-Jacob), Darcy velocity, retardation factor and travel time. SI units, no dependencies, tested against published reference values.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [{ "name": "Phreatica" }],
+  "keywords": ["hydrogeology", "groundwater", "slug test", "pumping test", "Theis", "Cooper-Jacob", "Hantush", "Bouwer-Rice", "Hvorslev", "Darcy"],
+  "related_identifiers": [{ "identifier": "https://phreatica.com", "relation": "isSupplementTo", "scheme": "url" }]
+}

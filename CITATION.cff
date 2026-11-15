@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Se usar este software em trabalhos acadêmicos ou relatórios, cite-o assim. / If you use this software, please cite it as below."
+title: "hidraulica-subterranea: groundwater hydraulics toolkit in TypeScript (slug tests, pumping tests, Darcy, retardation)"
+type: software
+authors:
+  - name: "Phreatica"
+    website: "https://phreatica.com"
+version: 0.1.0
+date-released: 2026-11-15
+license: MIT
+repository-code: "https://github.com/phreatica/hidraulica-subterranea"
+url: "https://phreatica.github.io/hidraulica-subterranea/"
+keywords:
+  - hydrogeology
+  - groundwater
+  - slug test
+  - pumping test
+  - Theis
+  - Cooper-Jacob
+  - Hantush
+  - Bouwer-Rice
+  - Hvorslev

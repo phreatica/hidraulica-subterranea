@@ -1,0 +1,65 @@
+{
+  "name": "hidraulica-subterranea",
+  "version": "0.1.0",
+  "description": "Hidráulica de águas subterrâneas em TypeScript: slug test (Hvorslev, Bouwer & Rice), bombeamento (Theis, Cooper-Jacob, recuperação, Hantush-Jacob), Darcy, retardamento e tempo de trânsito. Groundwater hydraulics toolkit.",
+  "keywords": [
+    "hidraulica",
+    "hydrogeology",
+    "groundwater",
+    "slug-test",
+    "pumping-test",
+    "theis",
+    "cooper-jacob",
+    "hantush",
+    "bouwer-rice",
+    "hvorslev",
+    "darcy",
+    "aquifer",
+    "brasil"
+  ],
+  "homepage": "https://phreatica.github.io/hidraulica-subterranea/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phreatica/hidraulica-subterranea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phreatica/hidraulica-subterranea/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Phreatica",
+    "url": "https://phreatica.com"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
